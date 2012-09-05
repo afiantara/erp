@@ -1,0 +1,42 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Upload Harga Jual</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<style>
+		legend { border: 1px solid #e9601a; background-color: #bbb; color: #fff; padding: 4px;}
+		fieldset { border: 1px solid #e9601a; padding: 10px; margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<p>
+	Format atau kolom data yang di Upload :
+	<br/>
+	Kode Produk | Tanggal | Valuta | Nilai | Potongan
+	</p>
+    <form wicket:id="progressUpload">
+	 <fieldset>
+	  <legend>Upload Harga Jual</legend>
+    	<p>
+	    <label for="upload">File :</label>
+	    <input wicket:id="fileInput" type="file"/>
+	    </p>
+	    <input type="submit" value="Upload!"/>
+	    <span wicket:id="progress">[[upload progressbar]]</span>
+	 </fieldset>
+    </form>
+	 <div>
+		<span wicket:id="uploadFeedback"/>
+	 </div>
+
+    <div>
+      <h4>Current files in <span wicket:id="dir">(dir)</span>:</h4>
+      <table>
+        <tr wicket:id="fileList">
+            <td width="200"><span wicket:id="file">(file)</span></td>
+            <td><a href="#" wicket:id="delete"><img src="delete.gif" border="0"/></a></td>
+            <td><a href="#" wicket:id="import"><img src="upload.png" border="0"/></a></td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

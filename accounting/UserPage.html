@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>User Master</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','Accounting | User');
+  	</script>
+</head>
+<body >
+	<div class="filterframe">
+		<div wicket:id="userfilter" class="bodyframe"/>
+	</div>
+	<br/>
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>User Id*</td>
+					<td>
+						<input type="text" wicket:id="kstaff" size="10px"/>
+						<span style="margin-left:100px;">Alias*</span><span><input type="text" wicket:id="kAlias" size="10px"/></span>
+						<span style="margin-left:100px;">*</span>
+						<span wicket:id="kcompany"><input type="radio">site 1</input><input type="radio">site 2</input>
+						</span>
+					</td>
+				</tr>
+				<tr>
+				  	<td>User Name*</td>
+				  	<td><input type="text" wicket:id="nstaff" size="100px"/></td>
+				  	<td/>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat1" size="100px"/></td>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat2" size="100px"/></td>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat3" size="100px"/></td>
+				</tr>
+				<tr>
+					<td>Kota*</td>
+	 				<td><input type="text" wicket:id="kota" size="30px"/>
+	 				<span style="margin-left:100px;">Kode Pos</span>
+	 				<span style="float:right;"><input type="text" wicket:id="kodepos" size="10px" /></span></td>
+				</tr>
+				<tr>
+					<td>No Telp</td>
+	 				<td>
+	 					<input type="text" wicket:id="notelp" size="30px"/>
+	 					<span style="margin-left:100px;">No Fax</span><span style="float:right;"><input type="text" wicket:id="nofax" size="30px" /></span>
+	 				</td>
+				</tr>
+				<tr>
+					<td>Tempat Lahir</td>
+	 				<td>
+	 					<input type="text" wicket:id="nofax" size="30px"/>
+	 					<span style="margin-left:100px;">Tanggal*:</span><span style="float:right;"><input type="text" wicket:id="tgllahir" size="20px"/></span>
+	 				</td>
+				</tr>
+				<tr>
+					<td>Posisi*</td>
+	 				<td>
+	 					<select wicket:id="kjabatan">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+						<span style="margin-left:195px;">Jabatan</span><span style="float:right;"><input type="text" wicket:id="djabatan" size="30px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Cabang*</td>
+	 				<td>
+	 					<select wicket:id="kcabang">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Izin Akses*</td>
+					<td>
+						<input type="checkbox" wicket:id="khpp"/>Harga Pokok
+    					<input type="checkbox" wicket:id="kprint" style="margin-left:100px;"/>Preview
+    					<input type="checkbox" wicket:id="kApprove" style="margin-left:100px;"/>Approve
+    				</td>
+				</tr>
+				<tr>
+					<td>Tgl Masuk*</td>
+					<td>
+						<input type="text" wicket:id="tglmasuk" size="20px"/>
+						<span style="margin-left:165px;">Tgl Keluar</span><span style="float:right;"><input type="text" wicket:id="tglkeluar" size="20px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Catatan</td>
+					<td><input type="text" wicket:id="keterangan" size="100px"/></td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+			
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+	</div>
+</body>
+</html>

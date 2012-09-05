@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Invoice Master</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','Accounting | Expedisi');
+  	</script>
+</head>
+<body >
+	<div class="filterframe">
+		<div wicket:id="expedisifilter" class="bodyframe"/>
+	</div>
+	<br/>
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>Kode Expedisi*</td>
+					<td><input type="text" wicket:id="kexpedisi" size="10px" maxlength="2"/></td>
+				</tr>
+				<tr>
+				  	<td>Nama Expedisi*</td>
+				  	<td><input type="text" wicket:id="nexpedisi" size="100px"/></td>
+				  	<td/>
+				</tr>
+				<tr>
+					<td>Alamat*</td>
+					<td><input type="text" wicket:id="alamat1" size="100px"/></td>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat2" size="100px"/></td>
+				</tr>
+				<tr>
+					<td>Kota*</td>
+					<td><input type="text" wicket:id="kota" size="30px"/>
+						<span style="margin-left:100px;">Kode Pos</span>
+		 				<span style="float:right;"><input type="text" wicket:id="kodepos" size="10px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>No Telp</td>
+					<td><input type="text" wicket:id="notelp" size="30px"/>
+						<span style="margin-left:100px;">No Fax</span>
+		 				<span style="float:right;"><input type="text" wicket:id="nofax" size="30px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td><input type="text" wicket:id="email" size="70px"/></td>
+				</tr>
+				<tr>
+					<td>Kontak #1</td>
+					<td><input type="text" wicket:id="kontak1" size="30px"/>
+						<span style="margin-left:100px;">No Telp/HP</span>
+		 				<span style="float:right;"><input type="text" wicket:id="nohp1" size="30px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Kontak #2</td>
+					<td><input type="text" wicket:id="kontak2" size="30px"/>
+						<span style="margin-left:100px;">No Telp/HP</span>
+		 				<span style="float:right;"><input type="text" wicket:id="nohp2" size="30px" /></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Expedisi Via*</td>
+					<td>
+						<span wicket:id="kodeviadesc"><input type="radio">site 1</input><input type="radio">site 2</input></span>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+			
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Top Frame</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="myscript.js" type="text/javascript"></script>
+    <script>
+		function showTime () {
+			var thetime=new Date();
+			var nhours=thetime.getHours();
+			var nmins=thetime.getMinutes();
+			var nsecn=thetime.getSeconds();
+			var AorP=" ";
+			if (nhours>=12)
+			    AorP="PM.";
+			else
+			    AorP="AM.";
+			if (nhours>=13)
+			    nhours-=12;
+			if (nhours==0)
+			 nhours=12;
+			if (nsecn<10)
+			 nsecn="0"+nsecn;
+			if (nmins<10)
+			 nmins="0"+nmins;
+			document.getElementById("clock").innerHTML = nhours+":"+nmins+":"+nsecn+" "+AorP;
+			document.getElementById("title").innerHTML = get_cookie('pagetitle');
+		}
+	</script>
+</head>
+<body onload="setInterval(showTime, 1000)">
+	<span wicket:id="mainNavigation"/>
+ </body>
+</html>
