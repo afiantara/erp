@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Right Frame, Page 1</title>
+</head>
+<body>
+    <form wicket:id="inputForm" class="inputForm">
+    	<fieldset>
+        <table id="inputFormTable">
+          <tr>
+          <td valign="top">
+			  <label for="stringProperty"></label>
+			  <input wicket:id="stringProperty" id="stringProperty" type="text" size="40"/>
+			  <label for="integerProperty"></label>
+			  <input wicket:id="integerProperty" id="integerProperty" type="text" size="40"/>
+			  <label for="doubleProperty"></label>
+			  <input wicket:id="doubleProperty" id="doubleProperty" type="text" size="40"/>	  
+			  
+	          <label>ListView</label>			  
+			  <ul>
+			   <li wicket:id="lines">
+			    <input type="text" wicket:id="lineEdit" /> 
+			   </li>
+			  </ul>
+			  <label for="booleanProperty"></label>
+			  <input wicket:id="booleanProperty" id="booleanProperty" type="checkbox"/>
+              <br /><br />
+              <span wicket:id="multiply">[multiply]</span>
+              = <span wicket:id="multiplyLabel">[result]</span>
+	      </td>
+	      <td valign="top">
+			  
+			  <label for="integerInRangeProperty"></label>
+			  <input wicket:id="integerInRangeProperty" id="integerInRangeProperty" type="text" size="40"/>
+	          <label for="urlProperty"></label>
+	          <input wicket:id="urlProperty" id="urlProperty" type="text" size="40"/>
+	          <label for="phoneNumberUS"></label>
+	          <input wicket:id="phoneNumberUS" id="phoneNumberUS" type="text" size="40"/>        
+			  <label for="numberRadioChoice"> (RadioChoice)</label>
+			  <span valign="top" wicket:id="numberRadioChoice" id="numberRadioChoice">
+	    		<input type="radio">foo</input>
+				<input type="radio">bar</input>
+			  </span>
+			  <span wicket:id="numbersGroup">
+			  <label>(RadioGroup)</label>			  
+				<span wicket:id="numbers">
+					<input type="radio" wicket:id="radio"/><label wicket:id="number" style="display:inline"></label>
+				</span>
+			  </span>
+			  <span wicket:id="numbersCheckGroup">
+			  <label>(CheckGroup)</label>			  
+				<span wicket:id="numbers">
+					<input type="checkbox" wicket:id="check"/><label wicket:id="number" style="display:inline;"></label>
+				</span>
+			  </span>
+			  <label for="siteSelection"></label>
+			  <select wicket:id="siteSelection" id="siteSelection">
+			  	<option>foo</option>
+			  	<option>bar</option>
+			  </select>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td colspan="2">
+			  <input type="submit" wicket:id="saveButton" value="save" />
+			  <input type="submit" wicket:id="resetButton" value="reset" />
+		  </td>
+		  </tr>
+		 </table>
+      </fieldset>
+     </form>
+</body>
+</html>

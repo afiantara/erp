@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>ERP Web Header</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="template/style.css"/>
+     <link rel="stylesheet" type="text/css" href="expbootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+    <link rel="stylesheet" href="sitemapstyler.css" type="text/css"/>
+    <script src="sitemapstyler.js" type="text/javascript"></script>
+    <script src="myscript.js" type="text/javascript"></script>
+    <script>
+  		set_cookie('pagetitle','');
+	</script>
+</head>
+  
+<body>
+<wicket:panel>
+	<div id="header">
+		<div style="float:left;"><a href="index.html" style="color: #E9601A" target="_top"><img src="logo.png" style="margin-left:400px;margin-top:5px"/></a></div>
+		<div style="float:right;"><div background="#000000" class="version">Wicket Version: <span wicket:id="version"/> | <wicket:link><a class="signout" href="SignOut.html" target="_top">Sign Out</a></wicket:link></div></div>
+	</div>
+	
+	<div id="titleblock" style="font-size:small;height:1.5em;vertical-align:center;">
+		 
+	    <div style="float:left;color:black;">
+	    	<span id="title"></span>
+	    </div>
+	    <div style="float:right;padding-right:10px;color:black;">
+	    	<span wicket:id="username">username</span> 
+	    	| 
+	    	<span wicket:id="clockdate">Date Now</span> 
+	    	| 
+	    	<span id="clock"></span>
+	    </div>
+    </div>
+     
+</wicket:panel>
+</body>
+</html>

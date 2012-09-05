@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Invoice Master</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','Accounting | Invoice');
+  	</script>
+</head>
+<body >
+	<div class="filterframe">
+		<div wicket:id="invoicefilter" class="bodyframe"/>
+	</div>
+	<br/>
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>Kode Invoice*</td>
+					<td><input type="text" wicket:id="kinvoice" size="10px" maxlength="3"/></td>
+				</tr>
+				<tr>
+				  	<td>Keterangan</td>
+				  	<td><input type="text" wicket:id="keterangan" size="100px"/></td>
+				  	<td/>
+				</tr>
+				<tr>
+					<td>Yang Tanda Tangan*</td>
+					<td><input type="text" wicket:id="direksi" size="100px"/></td>
+				</tr>
+				<tr>
+					<td>Kena PPN*</td>
+					<td>
+						<span wicket:id="kenappndesc"><input type="radio">site 1</input><input type="radio">site 2</input></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Konfirmasi Ulang PPN</td>
+	 				<td>
+	 					<span wicket:id="konfirmppndesc"><input type="radio">site 1</input><input type="radio">site 2</input></span>
+	 				</td>
+				</tr>
+				<tr>
+					<td>Acc. Penjualan*</td>
+	 				<td>
+	 					<select wicket:id="accsalesdesc">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Acc. Piutang*</td>
+	 				<td>
+	 					<select wicket:id="accpiutangdesc">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Acc. DP*</td>
+	 				<td>
+	 					<select wicket:id="accdpdesc">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Acc. PPn Out*</td>
+	 				<td>
+	 					<select wicket:id="accppndesc">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+			
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Gudang Master</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','Logistic | Master Gudang');
+  	</script>
+</head>
+<body >
+	<div class="filterframe">
+		<div wicket:id="gudangfilter" class="bodyframe"/>
+	</div>
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>Kode Gudang:</td>
+					<td><input type="text" wicket:id=kgudang size="10px"/></td>
+				</tr>
+				<tr>
+				  	<td>Alamat:</td>
+				  	<td><input type="text" wicket:id="alamat1" size="100px"/></td>
+				  	<td/>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat2" size="100px"/></td>
+				</tr>
+				<tr>
+					<td/>
+					<td><input type="text" wicket:id="alamat3" size="100px"/></td>
+				</tr>
+				<tr>
+					<td>Kota/Lokasi:</td>
+	 				<td><input type="text" wicket:id="kota" size="30px"/><span width="30px">Kode Pos:</span><span><input type="text" wicket:id="kodepos" size="10px"/></span></td>
+				</tr>
+				<tr>
+					<td>No Telp:</td>
+	 				<td><input type="text" wicket:id="notelp" size="30px"/><span width="30px">No Fax:</span><span><input type="text" wicket:id="nofax" size="30px"/></span></td>
+				</tr>
+				<tr>
+					<td>Kepala Gudang:</td>
+	 				<td><input type="text" wicket:id="kepgudang" size="30px"/></td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+			
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+	</div>
+	<!-- 
+	<div><span wicket:id="clock">Clock Here</span></div>
+	<div><span wicket:id="exampleTitle">Example Title Goes Here</span></div>
+	 -->
+</body>
+</html>

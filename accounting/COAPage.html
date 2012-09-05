@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Invoice Master</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','Accounting | Account No');
+  	</script>
+  	<script>
+  		function mask(str,textbox,loc,delim){
+  	  		var locs = loc.split(',');
+  	  		for(var i=0; i <= locs.length;i++)
+  	  		{
+	  	  		for(var k=0; k <=str.length;k++)
+	  	  		{
+	  	  	  		if(k==loc[i]){
+		  	  	  		if(str.substring(k,k+1)!=delim){
+			  	  	  		str=str.substring(0,k) + delim + str.substring(k,str.length)
+			  	  	  	}
+		  	  	  	}
+	  	  	  	}
+  	  		}
+  	  		textbox.value =str
+  	  	}
+  	</script>
+</head>
+<body >
+	<div class="filterframe">
+		<div wicket:id="coafilter" class="bodyframe"/>
+	</div>
+	<br/>
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>Account No*</td>
+					<td><input type="text" wicket:id="accno" size="10px" 
+					onKeyUp ="javascript:return mask(this.value,this,'4,9','.');"
+					onBlur ="javascript:return mask(this.value,this,'4,9','.');"
+					maxlength="12"/></td>
+				</tr>
+				<tr>
+				  	<td>Keterangan*</td>
+				  	<td><input type="text" wicket:id="accdesc" size="70px"/></td>
+				  	<td/>
+				</tr>
+				<tr>
+					<td>Group*</td>
+					<td>
+						<span wicket:id="accgroupdesc"><input type="radio">site 1</input><input type="radio">site 2</input></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Type*</td>
+					<td>
+						<span wicket:id="acctypedesc"><input type="radio">site 1</input><input type="radio">site 2</input></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Level*</td>
+					<td>
+						<span wicket:id="accleveldesc" ><input type="radio" style="margin-left:50px;">site 1</input><input type="radio" style="margin-left:50px;">site 2</input></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Biaya</td>
+					<td>
+						<input type="checkbox" wicket:id="boolaccbiayas"/>Sales
+    					<input type="checkbox" wicket:id="boolaccbiayab" style="margin-left:50px;"/>Purchasing
+    					<input type="checkbox" wicket:id="boolaccbiayap" style="margin-left:50px;"/>Project
+    					<input type="checkbox" wicket:id="boolaccbiayak" style="margin-left:50px;"/>Kendaraan
+    				</td>
+				</tr>
+				<tr>
+					<td>Kode Voucher In</td>
+					<td><input type="text" wicket:id="kodein" size="10px" maxlength="3"/>
+						<span style="margin-left:100px;">No Voucher Berikutnya</span>
+		 				<span style="float:right;"><input type="text" wicket:id="noin" size="10px" style="text-align:right;" maxlength="5"/></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Kode Voucher Out</td>
+					<td><input type="text" wicket:id="kodeout" size="10px" maxlength="3"/>
+						<span style="margin-left:100px;">No Voucher Berikutnya</span>
+		 				<span style="float:right;"><input type="text" wicket:id="noout" size="10px" style="text-align:right;" maxlength="5" /></span>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+			
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+	</div>
+</body>
+</html>

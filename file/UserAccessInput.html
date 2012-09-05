@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>User Akses</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="myscript.js" type="text/javascript"></script>
+  	<script>
+  		document.cookie = set_cookie('pagetitle','File | User Akses');
+  	</script>
+</head>
+<body >
+   	<div class="bodyframe">
+	    <form method="post" wicket:id="form" class="inputForm" action="#">
+	    	<table>
+				<tr>
+					<td>User ID*</td>
+					<td>	
+						<select wicket:id="userid">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+				  	<td>Menu*</td>
+				  	<td>
+			  			<select wicket:id="menuname">
+							<option>site 1</option>
+							<option>site 2</option>
+						</select>
+				  	</td>
+				</tr>
+				<tr>
+				  	<td>Status*</td>
+				  	<td>
+				  		<span wicket:id="recstatus" style="float:right;">
+							<input type="radio">site 1</input>
+							<input type="radio">site 2</input>
+						</span>
+				  	</td>
+				</tr>
+			</table>
+			<br/>
+			<div wicket:id="actionpanel"/>
+	    </form>
+		<span wicket:id="feedback">feedbackmessages will be put here</span>
+		<p><center><a wicket:id="homeLink" href="#">[go back]</a></center></p>
+	</div>
+</body>
+</html>
